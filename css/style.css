@@ -1,19 +1,25 @@
 #title{
         font-size: 50px;
-        width: 300px;
         position: relative;
         margin-left: 30px;
+        background-color: red;
     }
 
 #side_menu{font-size: 30px;
            color: red;
-           width: 50%;
+           width: 20%;
            float: left;
            margin-left: 30px;
+           margin-right: 100px;
+           background-color: aquamarine
+           
         }
 
-#main{font-size: 50px;
-        margin-right: 30px;
-}
+#main{ font-size: 50px;
+       padding-left: 20px;
+    }
 
-
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+        }
