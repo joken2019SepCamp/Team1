@@ -12,7 +12,7 @@
 
 <body>
 <?php
-$dsn='mysql:dbname=uploader;host=13.112.20.136;charset=utf8';
+$dsn='mysql:dbname=uploader;host=localhost;charset=utf8';
 $user='root';
 $password='ZCVdqcanPHa5';
 ?>
@@ -78,7 +78,7 @@ $password='ZCVdqcanPHa5';
   //元ファイル名の先頭にアップロード日時を加える
   $newfilename = $catstr."-".$_FILES['file_upload']['name'];
   //ファイルの保存先
-  $upload = '../Team1/upload_files/'.$newfilename;
+  $upload = './upload_files/'.$newfilename;
   //アップロードが正しく完了したかチェック
   if(move_uploaded_file($_FILES['file_upload']['tmp_name'], $upload)){
     echo 'アップロード完了','<br>';
