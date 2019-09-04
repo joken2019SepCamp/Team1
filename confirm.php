@@ -60,13 +60,13 @@
             echo "アップロードするファイル：".$_FILES['file_upload']['name'];
             ?>
 
-<form action="./complete.php" enctype="multipart/form-data" method="post">
-             <input type="hidden" name="nenji" value="$_POST['nenji']">
-             <input type="hidden" name="zenko" value="$_POST['zenko']">
-             <input type="hidden" name="kyoka" value="$_POST['kyoka']">
-             <input type="hidden" name="chu_k" value="$_POST['chu_k']">
-             <input type="hidden" name="nend" value=" $_POST['nend'] ">
-             <input type="hidden" name="file_uplpad" value=" $_FILES['file_upload']['name'] ">
+            <form action="./complete.php" enctype="multipart/form-data" method="post">
+             <input type="hidden" name="nenji" value="<?php echo $_POST['nenji']; ?>">
+             <input type="hidden" name="zenko" value="<?php echo $_POST['zenko']; ?>">
+             <input type="hidden" name="kyoka" value="<?php $_POST['kyoka']; ?>">
+             <input type="hidden" name="chu_k" value="<?php $_POST['chu_k']; ?>">
+             <input type="hidden" name="nend" value=" <?php $_POST['nend'] ?>">
+             <input type="hidden" name="file_uplpad" value=" <?php $_FILES['file_upload']['name'] ?>">
 
             こちらで間違いないですか？ <input type="submit" value=これはボタン>
             </form>

@@ -37,8 +37,9 @@
     <div id="main"　class="col-md-8 sticky">
        <p>
            オワオワリです。
-
-
+          <?php
+          var_dump($_POST);
+?>
            <?php
           //ファイルの保存先
           $upload = './upload_files'.$_FILES['file_upload']['name'];
