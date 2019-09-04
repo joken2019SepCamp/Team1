@@ -36,38 +36,7 @@
  <section class="main-content">
     <div id="main"　class="col-md-8 sticky">
        <p>
-            確認<br>
-            <?php
-            echo "年次：" , $_POST['nenji'] ,"<br>";
-            echo "前後期：" ;
-            if ($_POST['zenko']==1) {
-                echo "前期","<br>" ;
-            }else{
-                echo "後期","<br>" ;
-            }
-            echo "教科名：" , $_POST['kyoka'] , "<br>";
-            echo "中間・期末：";
-            if ($_POST['chu_k']==1) {
-                echo "中間テスト1","<br>";
-            }else if ($_POST['chu_k']==2) {
-                echo "中間テスト2","<br>";
-            }else if ($_POST['chu_k']==3) {
-                echo "中間テスト3","<br>";
-            }else if ($_POST['chu_k']==4) {
-                echo "期末テスト","<br>";
-            }
-            echo "年度：" , $_POST['nend'] , "年","<br>";
-            echo "アップロードするファイル：";
-            ?>
-
-             <form action="./complete.php" >
-             <input type="hidden" name="nenji" value="$_POST['nenji']">
-             <input type="hidden" name="zenko" value="$_POST['zenko']">
-             <input type="hidden" name="" value="aaa">
-             <input type="hidden" name="nenji" value="aaa">
-            </form>
-
-            こちらで間違いないですか？ <input type="submit" value=>
+           オワオワリです。
        </p>
     </div>
   </section>

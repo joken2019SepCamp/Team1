@@ -1,9 +1,3 @@
-<?php
-$dsn='mysql:dbname=kako_tag;host=http://13.112.20.136/phpmyadmin/server_databases.php;charset=utf8';
-$user='root';
-$password='ZCVdqcanPHa5';
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -78,14 +72,7 @@ $password='ZCVdqcanPHa5';
 
         <form action="file_up.php" enctype="multipart/form-data" method="post">
         <input name="file_upload" type="file" />
-        <?php
-        //POSTされたデータを受信する
-        $nenji=$_POST['nenji'];
-        $zenko=$_POST['zenko'];
-        $kyoka=$_POST['kyoka'];
-        $chu_k=$_POST['chu_k'];
-        $nend=$_POST['nend'];
-        ?>
+
         <input type="submit" value="アップロード" onclick='return confirm("よろしいですか？");' />
         </form>
         <?php
