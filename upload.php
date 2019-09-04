@@ -1,3 +1,8 @@
+<?php
+$dsn='mysql:dbname=kako_tag;host=http://13.112.20.136/phpmyadmin/server_databases.php;charset=utf8';
+$user='root';
+$password='ZCVdqcanPHa5';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +13,8 @@
 
 </head>
 <body>
+
+
   <!--コンテナ-->
   <div class="container">
 
@@ -24,9 +31,8 @@
     </div>
 
     <div id="main">
-
+        <form action="./confirm.php" method="post">
         <p>年次</p>
-        <form action="" method="post">
         <select name='nenji'>
         <option value='1'>1年</option>
         <option value='2'>2年</option>
@@ -60,14 +66,8 @@
         <input type="text" name="nend">
         <br>
 
-
+        <form action="file_up.php" enctype="multipart/form-data" method="post">
         <input name="file_upload" type="file" />
-        <?php
-          //ファイルの保存先
-          $upload = './files'.$_FILES['file_upload']['name'];
-        ?>
-        <input type="submit" value="送信">
-    </form>
         <?php
         //POSTされたデータを受信する
         $nenji=$_POST['nenji'];
@@ -75,9 +75,16 @@
         $kyoka=$_POST['kyoka'];
         $chu_k=$_POST['chu_k'];
         $nend=$_POST['nend'];
-
-
+        var_dump($_POST);
         ?>
+        <input type="submit" value="アップロード" onclick='return confirm("よろしいですか？");' />
+        </form>
+        <?php
+          //ファイルの保存先
+          $upload = './files'.$_FILES['file_upload']['name'];
+        ?>
+    </form>
+
 
         <br>
 
