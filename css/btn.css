@@ -1,0 +1,23 @@
+.btn-circle-flat {
+    display: inline-block;
+    text-decoration: none;
+    background: #87befd;
+    color: #FFF;
+    width: 150px;
+    height: 150px;
+    line-height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    transition: .4s;
+    position: fixed;
+    top: 75%;
+    left: 87%;
+    font-size: 140%;
+
+
+}
+
+.btn-circle-flat:hover {
+    background: #668ad8;
+}
