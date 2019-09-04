@@ -12,7 +12,7 @@
 
 <body>
 <?php
-$dsn='mysql:dbname=uploader;host=13.112.20.136;charset=utf8';
+$dsn='mysql:dbname=uploader;host=localhost;charset=utf8';
 $user='root';
 $password='ZCVdqcanPHa5';
 ?>
@@ -89,7 +89,8 @@ $password='ZCVdqcanPHa5';
     $dbh=new PDO($dsn,$user,$password);
     $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     //SQL文を格納する
-    $sql ="INSERT INTO kako_tag(nenji,zengo,kyoka,chu_ki,nendo,filepass)VALUES(".$_POST['nenji'].",".$_POST['zenko'].",".$_POST['kyoka'].",".$_POST['chu_k'].",".$_POST['nend'].",".$upload.")";
+    $sql ="INSERT INTO kako_tag(nenji,zengo,kyoka,chu_ki,nendo,filepass)VALUES(".$_POST['nenji'].",".$_POST['zenko'].", '".$_POST['kyoka']."',".$_POST['chu_k'].",".$_POST['nend'].",'".$upload."')";
+    echo $sql;
     //SQL文を実行する
     $stmt = $dbh->prepare($sql);
     $stmt->execute();
