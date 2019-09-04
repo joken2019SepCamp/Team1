@@ -73,7 +73,7 @@
       <!-- ファイルをアップロードするよ -->
         <input name="file_upload" type="file" />
 
-        <input type="submit" value="アップロード"  />
+        <input type="submit" value="アップロード" onclick="return confirm("よろしいですか？");" />
 
     </form>
 

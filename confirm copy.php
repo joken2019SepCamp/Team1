@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+$_SESSION['name']=$_FILES['file_upload']['name'];
+$_SESSION['tmp_name']=$_FILES['file_upload']['tmp_name'];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,11 +17,7 @@
 </head>
 
 <body>
-<?php
-$dsn='mysql:dbname=uploader;host=13.112.20.136;charset=utf8';
-$user='root';
-$password='ZCVdqcanPHa5';
-?>
+
   <!--コンテナ-->
   <div class="container">
 <!--マルチカラム範囲-->
@@ -41,10 +43,10 @@ $password='ZCVdqcanPHa5';
  <section class="main-content">
     <div id="main"　class="col-md-8 sticky">
        <p>
-            ☆★☆更新完了★☆★<br>
+            確認<br>
             <?php
             echo "年次：" , $_POST['nenji'] ,"<br>";
-            $catstr = $_POST['nenji'].'年';
+            $catstr = '-'.$_POST['nenji'].'年';
             echo "前後期：" ;
             if ($_POST['zenko']==1) {
                 echo "前期","<br>" ;
@@ -71,36 +73,17 @@ $password='ZCVdqcanPHa5';
             }
             echo "年度：" , $_POST['nend'] ,"年","<br>";
             $catstr.='-'.$_POST['nend'].'年';
-            echo "アップロードするファイル：".$_FILES['file_upload']['name'],"<br>";
+            echo "アップロードするファイル：".$_FILES['file_upload']['name'];
             ?>
 
-<?php
-  //元ファイル名の先頭にアップロード日時を加える
-  $newfilename = $catstr."-".$_FILES['file_upload']['name'];
-  //ファイルの保存先
-  $upload = './upload_files/'.$newfilename;
-  //アップロードが正しく完了したかチェック
-  if(move_uploaded_file($_FILES['file_upload']['tmp_name'], $upload)){
-    echo 'アップロード完了','<br>';
-  }else{
-    echo 'アップロード失敗','<br>';
-  }
-  try{
-    $dbh=new PDO($dsn,$user,$password);
-    $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-    //SQL文を格納する
-    $sql ="INSERT INTO kako_tag(nenji,zengo,kyoka,chu_ki,nendo,filepass)VALUES(".$_POST['nenji'].",".$_POST['zenko'].",".$_POST['kyoka'].",".$_POST['chu_k'].",".$_POST['nend'].",".$upload.")";
-    //SQL文を実行する
-    $stmt = $dbh->prepare($sql);
-    $stmt->execute();
-    echo '接続に成功しています';
- }catch(PDOException $e){
-    print('Connection failed:'.$e->getMessage());
-    die();
- }
-?>
-
-            こちらの内容でアップロードしました。 <input type="submit" value=お疲れさまでした>
+            <form action="./complete.php" enctype="multipart/form-data" method="post">
+             <input type="hidden" name="nenji" value="<?php echo $_POST['nenji']; ?>">
+             <input type="hidden" name="zenko" value="<?php echo $_POST['zenko']; ?>">
+             <input type="hidden" name="kyoka" value="<?php echo $_POST['kyoka']; ?>">
+             <input type="hidden" name="chu_k" value="<?php echo $_POST['chu_k']; ?>">
+             <input type="hidden" name="nend" value=" <?php echo $_POST['nend'] ?>">
+             <input type="hidden" name="newname" value=" <?php echo $catstr?>">
+            こちらで間違いないですか？ <input type="submit" value=これはボタン>
             </form>
 
 

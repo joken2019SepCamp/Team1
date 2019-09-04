@@ -11,6 +11,20 @@
 </head>
 
 <body>
+
+<?php
+  //元ファイル名の先頭にアップロード日時を加える
+  $newfilename = $catstr."-".$_SESSION['name'];
+  //ファイルの保存先
+  $upload = './upload_files/'.$newfilename;
+  //アップロードが正しく完了したかチェック
+  if(move_uploaded_file($_SESSION['tmp_name'], $upload)){
+    echo 'アップロード完了';
+  }else{
+    echo 'アップロード失敗';
+  }
+?>
+
   <!--コンテナ-->
   <div class="container">
 <!--マルチカラム範囲-->
@@ -40,12 +54,6 @@
           <?php
           var_dump($_POST);
 ?>
-           <?php
-          //ファイルの保存先
-          $upload = './upload_files'.$_FILES['file_upload']['name'];
-        ?>
-
-
        </p>
     </div>
   </section>
