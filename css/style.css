@@ -1,26 +1,52 @@
-.title{
-    text-align: center;
-    
+@font-face {
+    font-family: 'myfont';
+    src: url('../font/KGTenThousandReasons.woff2') format('woff2');
+
+}
+
+body {
+    background-color: rgb(0, 125, 50, 0.3);
+}
+
+ul {
+    list-style: none;
+
 }
 
 #side_menu{
-    font-size: 20px;
+    font-size: 16px;
     width: 40%;
     float: left;
-    background-color: aquamarine;
+    padding: 0;
     margin-top: 10px;
     flex-basis: auto;
     position: sticky;
     margin-bottom: 0;
     top: 10px;
-    z-index: 1;   
+    z-index: 1; 
+    letter-spacing: 2px; 
+
     }
 
+#side_menu :first-letter{
+    font-size: 1.5em;
+
+}
+
+#side_menu :after{
+    content:"";
+    display:block;
+    height: 1px;
+    width:100%;
+    background: -webkit-gradient(left,#40bfa0 0%,#fef785 82%,#f37b7b 100%);
+    background: linear-gradient(to right, #40bfa0 0%,#fef785 82%,#f37b7b 100%);
+
+}
 #main{ 
 font-size: 20px;
 width: 100%;
 margin-left: 20px;
-background-color: rgba(255,0,0,0.3);
+
 margin-top: 10px;
 flex-grow: 2;
 flex-basis: auto;
@@ -36,4 +62,18 @@ flex-direction: row;
 flex-wrap: nowrap;
 justify-content: center;
 align-items: flex-start;
+}
+
+
+
+#font {
+    font-size: 60px;
+    color: white;
+    font-family: 'myfont';
+    text-align: center;
+    background-image: url('./img/blackboard4.jpg');
+    width: 60%;
+    height: 10%;
+    margin-left: 20%;
+   
 }
