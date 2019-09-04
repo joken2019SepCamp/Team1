@@ -1,40 +1,31 @@
-/* ↓スクロールに応じて要素を固定↓ */
-.sticky {
-    position: -webkit-sticky; /* Safari用 */
-    position: sticky; /* 要素をスクロールに応じて固定 */
-    top: 0; /* 縦スクロールに追従 */
-    z-index: 100; /* z-indexで最前面に持ってくる */
-}
-.thead-sticky {
-    position: -webkit-sticky; /* Safari用 */
-    position: sticky; /* 要素をスクロールに応じて固定 */
-    top: 0; /* 縦スクロールに追従 */
-    z-index: 3; /* z-indexで前面に持ってくる */
-}
-.th-sticky {
-    position: -webkit-sticky; /* Safari用 */
-    position: sticky; /* 要素をスクロールに応じて固定 */
-    left: 0; /* 横スクロールに追従 */
-    z-index: 2; /* z-indexで前面に持ってくる */
-}
+
+
 .title{
-        position: relative;
+        text-align: center;
         
     }
 
-#side_menu{font-size: 20px;
-        width: 100%;
-           float: left;
-           background-color: aquamarine;
-           margin-top: 10px;
-           
+#side_menu{
+        font-size: 20px;
+        width: 40%;
+        float: left;
+        background-color: aquamarine;
+        margin-top: 10px;
+        flex-basis: auto;
+        position: sticky;
+        margin-bottom: 0;
+        top: 10px;
+        z-index: 1;   
         }
 
-#main{ font-size: 40px;
-       
-       margin-left: 20px;
-       background-color: rgba(255,0,0,0.3);
-       margin-top: 10px;
+#main{ 
+    font-size: 40px;
+    width: 100%;
+    margin-left: 20px;
+    background-color: rgba(255,0,0,0.3);
+    margin-top: 10px;
+    flex-grow: 2;
+    flex-basis: auto;
        
 
     }
@@ -42,22 +33,10 @@
 .container {
     max-width: 940px;
     margin: 0 auto;
-        }
-
-/* マルチカラム関連 */
-.wrapper {
-    width: 100%;
-    overflow: auto;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: center;
+   align-items: flex-start;
 }
 
-.main-content {
-    float: right;
-    width: 66%;
-
-}
-
-.sidebar {
-    float: left;
-    width: 30%;
-    padding-top: 24px;
-}
