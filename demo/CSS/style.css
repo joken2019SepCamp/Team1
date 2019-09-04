@@ -1,0 +1,23 @@
+.title{
+        position: relative;
+        margin-left: 40px;
+    }
+
+#side_menu{font-size: 30px;
+           color: red;
+           width: 20%;
+           float: left;
+           margin-left: 30px;
+           margin-right: 100px;
+           background-color: aquamarine
+           
+        }
+
+#main{ font-size: 50px;
+       padding-left: 20px;
+    }
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+        }
