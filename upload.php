@@ -70,10 +70,10 @@
         <input type="text" name="nend">
         <br>
 
-
+      <!-- ファイルをアップロードするよ -->
         <input name="file_upload" type="file" />
 
-        <input type="submit" value="アップロード" onclick='return confirm("よろしいですか？");' />
+        <input type="submit" value="アップロード"  />
 
     </form>
 

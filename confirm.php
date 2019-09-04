@@ -1,3 +1,15 @@
+<?php
+  //元ファイル名の先頭にアップロード日時を加える
+  $newfilename = date("YmdHis")."-".$_FILES['file_upload']['name'];
+  //ファイルの保存先
+  $upload = './upload_files/'.$newfilename;
+  //アップロードが正しく完了したかチェック
+  if(move_uploaded_file($_FILES['file_upload']['tmp_name'], $upload)){
+    echo 'アップロード完了';
+  }else{
+    echo 'アップロード失敗';
+  }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,13 +72,17 @@
             echo "アップロードするファイル：".$_FILES['file_upload']['name'];
             ?>
 
+          <?php
+            var_dump($_POST);
+          ?>
+
             <form action="./complete.php" enctype="multipart/form-data" method="post">
              <input type="hidden" name="nenji" value="<?php echo $_POST['nenji']; ?>">
              <input type="hidden" name="zenko" value="<?php echo $_POST['zenko']; ?>">
-             <input type="hidden" name="kyoka" value="<?php $_POST['kyoka']; ?>">
-             <input type="hidden" name="chu_k" value="<?php $_POST['chu_k']; ?>">
-             <input type="hidden" name="nend" value=" <?php $_POST['nend'] ?>">
-             <input type="hidden" name="file_uplpad" value=" <?php $_FILES['file_upload']['name'] ?>">
+             <input type="hidden" name="kyoka" value="<?php echo $_POST['kyoka']; ?>">
+             <input type="hidden" name="chu_k" value="<?php echo $_POST['chu_k']; ?>">
+             <input type="hidden" name="nend" value=" <?php echo $_POST['nend'] ?>">
+             <input type="hidden" name="file_uplpad" value=" <?php echo $_FILES['file_upload']['name'] ?>">
 
             こちらで間違いないですか？ <input type="submit" value=これはボタン>
             </form>
