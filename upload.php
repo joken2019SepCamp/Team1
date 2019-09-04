@@ -85,7 +85,6 @@ $password='ZCVdqcanPHa5';
         $kyoka=$_POST['kyoka'];
         $chu_k=$_POST['chu_k'];
         $nend=$_POST['nend'];
-        var_dump($_POST);
         ?>
         <input type="submit" value="アップロード" onclick='return confirm("よろしいですか？");' />
         </form>

@@ -38,14 +38,26 @@
        <p>
             確認<br>
             <?php
-            echo "年次：" , $nenji ,"<br>";
-            echo "前後期：" ,if ($zenko==1) {
-
+            echo "年次：" , $_POST['nenji'] ,"<br>";
+            echo "前後期：" ;
+            if ($_POST['zenko']==1) {
+                echo "前期","<br>" ;
+            }else{
+                echo "後期","<br>" ;
             }
-            echo "教科名："
-            echo "中間・期末："
-            echo "年度："
-            アップロードするファイル：?>
+            echo "教科名：" , $_POST['kyoka'] , "<br>";
+            echo "中間・期末：";
+            if ($_POST['chu_k']==1) {
+                echo "中間テスト1","<br>";
+            }else if ($_POST['chu_k']==2) {
+                echo "中間テスト2","<br>";
+            }else if ($_POST['chu_k']==3) {
+                echo "中間テスト3","<br>";
+            }else if ($_POST['chu_k']==4) {
+                echo "期末テスト","<br>";
+            }
+            echo "年度：" , $_POST['nend'] , "年","<br>";
+            echo "アップロードするファイル：";?>
             こちらで間違いないですか？ <input type="submit" value="">
        </p>
     </div>
