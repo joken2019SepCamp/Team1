@@ -101,7 +101,7 @@ $password='ZCVdqcanPHa5';
  }
 ?>
 
-            こちらの内容でアップロードしました。 <input type="submit" value=お疲れさまでした>
+            こちらの内容でアップロードしました。 <input type="button" value="お疲れさまでした" href="./index.html" >
             </form>
 
 
