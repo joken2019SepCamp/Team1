@@ -6,7 +6,7 @@
 ul {
     list-style: none;
 }
-    
+
 body {
     background-color: rgba(0, 125, 50, 0.2)
 }
@@ -23,8 +23,8 @@ body {
     top: 10px;
     z-index: 1;
     padding: 0;
-    letter-spacing: 2px;   
-    
+    letter-spacing: 2px;
+
     }
 
 #side_menu ::first-letter {
@@ -40,14 +40,14 @@ body {
     background: linear-gradient(to right, #40bfa0 0%,#fef785 82%,#f37b7b 100%);
 }
 
-#main{ 
+#main{
 font-size: 20px;
 width: 100%;
 margin-left: 20px;
 margin-top: 10px;
 flex-grow: 2;
 flex-basis: auto;
-   
+
 
 }
 
@@ -67,7 +67,7 @@ align-items: flex-start;
     font-family: 'myfont';
     background-image: url('./img/blackboard4.jpg');
     width: 52%;
-    height: 10%;
+    height: 40%;
     text-align: center;
     margin-left: 23%;
 }
