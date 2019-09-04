@@ -17,50 +17,68 @@
 <div class="row">
     <div id="side_menu">
         <ul>
-        <li>ホーム</li>
-        <li>エビちゃん</li>
-        <li>概要</li>
+        <li>ファッキンコールド</li>
+        <li>ファッキンホット</li>
+        <li>ファッキン普通</li>
         </ul>
     </div>
 
     <div id="main">
 
         <p>年次</p>
-        <form method='POST' action='/test'>
+        <form action="" method="post">
         <select name='nenji'>
         <option value='1'>1年</option>
         <option value='2'>2年</option>
         <option value='3'>3年</option>
         <option value='4'>4年</option>
         </select>
-        <input type='submit' value='送信' />
-        </form>
+
         <br>
 
         <p>前後期</p>
-        <form method='POST' action='/test'>
         <select name='zenko'>
         <option value='1'>前期</option>
         <option value='2'>後期</option>
         </select>
-        <input type='submit' value='送信' />
-        </form>
         <br>
 
         <p>教科名</p>
-        <input type="text" >
+        <input type="text" name="kyoka">
         <br>
 
         <p>中間・期末</p>
-        <form method='POST' action='/test'>
-        <select name='nenji'>
+        <select name='chu_k'>
         <option value='1'>中間1</option>
         <option value='2'>中間2</option>
         <option value='3'>中間3</option>
         <option value='4'>期末<html>
         </select>
-        <input type='submit' value='送信' />
-        </form>
+        <br>
+
+        <p>年度</p>
+        <input type="text" name="nend">
+        <br>
+
+
+        <input name="file_upload" type="file" />
+        <?php
+          //ファイルの保存先
+          $upload = './files'.$_FILES['file_upload']['name'];
+        ?>
+        <input type="submit" value="送信">
+    </form>
+        <?php
+        //POSTされたデータを受信する
+        $nenji=$_POST['nenji'];
+        $zenko=$_POST['zenko'];
+        $kyoka=$_POST['kyoka'];
+        $chu_k=$_POST['chu_k'];
+        $nend=$_POST['nend'];
+
+
+        ?>
+
         <br>
 
     </div>
