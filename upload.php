@@ -35,7 +35,7 @@
  <!--本文エリア-->
  <section class="main-content">
     <div id="main"　class="col-md-8 sticky">
-    <form action="./confirm.php" method="post">
+        <form action="./confirm.php" enctype="multipart/form-data" method="post">
         <p>年次</p>
         <select name='nenji'>
         <option value='1'>1年</option>
@@ -70,15 +70,11 @@
         <input type="text" name="nend">
         <br>
 
-        <form action="file_up.php" enctype="multipart/form-data" method="post">
+
         <input name="file_upload" type="file" />
 
         <input type="submit" value="アップロード" onclick='return confirm("よろしいですか？");' />
-        </form>
-        <?php
-          //ファイルの保存先
-          $upload = './files'.$_FILES['file_upload']['name'];
-        ?>
+
     </form>
 
 

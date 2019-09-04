@@ -56,18 +56,22 @@
             }else if ($_POST['chu_k']==4) {
                 echo "期末テスト","<br>";
             }
-            echo "年度：" , $_POST['nend'] , "年","<br>";
-            echo "アップロードするファイル：";
+            echo "年度：" , $_POST['nend'] ,"年","<br>";
+            echo "アップロードするファイル：".$_FILES['file_upload']['name'];
             ?>
 
-             <form action="./complete.php" >
+<form action="./complete.php" enctype="multipart/form-data" method="post">
              <input type="hidden" name="nenji" value="$_POST['nenji']">
              <input type="hidden" name="zenko" value="$_POST['zenko']">
-             <input type="hidden" name="" value="aaa">
-             <input type="hidden" name="nenji" value="aaa">
+             <input type="hidden" name="kyoka" value="$_POST['kyoka']">
+             <input type="hidden" name="chu_k" value="$_POST['chu_k']">
+             <input type="hidden" name="nend" value=" $_POST['nend'] ">
+             <input type="hidden" name="file_uplpad" value=" $_FILES['file_upload']['name'] ">
+
+            こちらで間違いないですか？ <input type="submit" value=これはボタン>
             </form>
 
-            こちらで間違いないですか？ <input type="submit" value=>
+
        </p>
     </div>
   </section>

@@ -37,6 +37,14 @@
     <div id="main"　class="col-md-8 sticky">
        <p>
            オワオワリです。
+
+
+           <?php
+          //ファイルの保存先
+          $upload = './upload_files'.$_FILES['file_upload']['name'];
+        ?>
+
+
        </p>
     </div>
   </section>
