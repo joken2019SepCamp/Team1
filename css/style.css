@@ -1,23 +1,63 @@
+/* ↓スクロールに応じて要素を固定↓ */
+.sticky {
+    position: -webkit-sticky; /* Safari用 */
+    position: sticky; /* 要素をスクロールに応じて固定 */
+    top: 0; /* 縦スクロールに追従 */
+    z-index: 100; /* z-indexで最前面に持ってくる */
+}
+.thead-sticky {
+    position: -webkit-sticky; /* Safari用 */
+    position: sticky; /* 要素をスクロールに応じて固定 */
+    top: 0; /* 縦スクロールに追従 */
+    z-index: 3; /* z-indexで前面に持ってくる */
+}
+.th-sticky {
+    position: -webkit-sticky; /* Safari用 */
+    position: sticky; /* 要素をスクロールに応じて固定 */
+    left: 0; /* 横スクロールに追従 */
+    z-index: 2; /* z-indexで前面に持ってくる */
+}
 .title{
         position: relative;
-        margin-left: 40px;
+        
     }
 
-#side_menu{font-size: 30px;
-           color: red;
-           width: 20%;
+#side_menu{font-size: 20px;
+        width: 100%;
            float: left;
-           margin-left: 30px;
-           margin-right: 100px;
-           background-color: aquamarine
+           background-color: aquamarine;
+           margin-top: 10px;
            
         }
 
-#main{ font-size: 50px;
-       padding-left: 20px;
+#main{ font-size: 40px;
+       
+       margin-left: 20px;
+       background-color: rgba(255,0,0,0.3);
+       margin-top: 10px;
+       
+
     }
 
 .container {
     max-width: 940px;
     margin: 0 auto;
         }
+
+/* マルチカラム関連 */
+.wrapper {
+    width: 100%;
+    overflow: auto;
+}
+
+.main-content {
+    float: right;
+    width: 66%;
+
+}
+
+.sidebar {
+    float: left;
+    width: 30%;
+    padding-top: 24px;
+}
