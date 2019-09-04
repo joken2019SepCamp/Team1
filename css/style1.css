@@ -1,0 +1,42 @@
+
+
+.title{
+        text-align: center;
+        
+    }
+
+#side_menu{
+        font-size: 20px;
+        width: 40%;
+        float: left;
+        background-color: aquamarine;
+        margin-top: 10px;
+        flex-basis: auto;
+        position: sticky;
+        margin-bottom: 0;
+        top: 10px;
+        z-index: 1;   
+        }
+
+#main{ 
+    font-size: 40px;
+    width: 100%;
+    margin-left: 20px;
+    background-color: rgba(255,0,0,0.3);
+    margin-top: 10px;
+    flex-grow: 2;
+    flex-basis: auto;
+       
+
+    }
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: center;
+   align-items: flex-start;
+}
+
