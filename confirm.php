@@ -19,7 +19,7 @@
            <li>記事</li>
            <li>概要</li>
            <li>新規登録</li>
-           <li>過去問閲覧</li>
+           <li><a href="down.php">過去問閲覧</a></li>
            <li>おまけ</li>
          </ul>
      </div>
