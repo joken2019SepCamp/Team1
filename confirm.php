@@ -90,7 +90,6 @@ $password='ZCVdqcanPHa5';
     $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     //SQL文を格納する
     $sql ="INSERT INTO kako_tag(nenji,zengo,kyoka,chu_ki,nendo,filepass)VALUES(".$_POST['nenji'].",".$_POST['zenko'].", '".$_POST['kyoka']."',".$_POST['chu_k'].",".$_POST['nend'].",'".$upload."')";
-    echo $sql;
     //SQL文を実行する
     $stmt = $dbh->prepare($sql);
     $stmt->execute();
