@@ -71,6 +71,9 @@
               //$zengo="1";
               //$cyuki="2";
               //$year="2019";
+              $dsn='mysql:dbname=uploader;host=localhost;charset=utf8';
+              $user='root';
+              $password='ZCVdqcanPHa5';
               $dbh=new PDO($dsn,$user,$password);
               $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
               $sql="SELECT COUNT(*) FROM kako_tag where kyoka='".$kyoka."' and nenji='".$nenji."' and zengo='".$zengo."'and chu_ki='".$chuki."'";
@@ -83,7 +86,7 @@
               }
               foreach($data as $pika){
               if($pika['COUNT(*)']>=1){
-                  echo 'ある：';
+                  echo '該当の過去問は登録されています。：';
                   $sql="SELECT * from kako_tag where kyoka='".$kyoka."' and nenji='".$nenji."' and zengo='".$zengo."'and chu_ki='".$chuki."'";
                   $stmt = $dbh->prepare($sql);
                   $stmt->execute();
@@ -99,7 +102,7 @@
                       
                   }
               }else{
-                  echo 'ない';
+                  echo '該当の過去問はありません';
               }
           }
           }catch(PDOException $e){
@@ -121,7 +124,6 @@ readfile($fpath);
 
 
             ?>
-            こちらになります 
             </form>
 
 
