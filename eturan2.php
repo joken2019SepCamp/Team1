@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
    <title>GMGP</title>
    <meta http-equiv="content-type" charset="utf-8">
@@ -15,7 +15,7 @@
  <div class="container">
     <div id="side_menu">
          <ul>
-           <li>ホーム</li>
+           <li><a href="index.html">ホーム</a></li>
            <li>記事</li>
            <li>概要</li>
            <li>新規登録</li>
