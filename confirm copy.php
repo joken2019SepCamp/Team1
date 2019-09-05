@@ -18,6 +18,11 @@ $_SESSION['tmp_name']=$_FILES['file_upload']['tmp_name'];
       <h1 id="font">One for All<br>All for One</h1>
 </header>
 <body>
+<?php
+$dsn='mysql:dbname=uploader;host=localhost;charset=utf8';
+$user='root';
+$password='ZCVdqcanPHa5';
+?>
  <!--コンテナ-->
  <div class="container">
     <div id="side_menu">
