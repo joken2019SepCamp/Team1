@@ -26,7 +26,7 @@
 <!--本文エリア-->
     <div id="main">
        <p>
-            ☆★☆更新完了★☆★<br>
+            ☆★☆検索完了★☆★<br>
             <?php
             echo "年次：" , $_POST['nenji'] ,"<br>";
             $catstr = $_POST['nenji'].'年';
